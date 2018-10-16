@@ -31,7 +31,7 @@
 		<jackson-annotations.version>2.9.7</jackson-annotations.version>
 		<validation-api.version>2.0.1.Final</validation-api.version>
 		<!-- 3.0.0-rc1 -->
-		<swagger-codegen-maven-plugin.version>2.3.1</swagger-codegen-maven-plugin.version>
+		<swagger-codegen-maven-plugin.version>3.0.1</swagger-codegen-maven-plugin.version>
 
 	</properties>
 
@@ -156,7 +156,7 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>io.swagger</groupId>
+				<groupId>io.swagger.codegen.v3</groupId>
 				<artifactId>swagger-codegen-maven-plugin</artifactId>
 				<version>${swagger-codegen-maven-plugin.version}</version>
 
@@ -179,62 +179,14 @@
 						</configuration>
 					</execution>
 					<execution>
-						<id>angular-typescript-api</id>
+						<id>object-swift4-api</id>
 						<goals>
 							<goal>generate</goal>
 						</goals>
 						<configuration>
 							<inputSpec>${basedir}/src/main/resources/META-INF/resources/api.yaml</inputSpec>
 							<output>${project.build.directory}/client/</output>
-							<language>typescript-angular</language>
-							<configOptions></configOptions>
-						</configuration>
-					</execution>
-					<execution>
-						<id>object-c-api</id>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<inputSpec>${basedir}/src/main/resources/META-INF/resources/homeBarAdInfo.yaml</inputSpec>
-							<output>${project.build.directory}/objectc/client/</output>
-							<language>objc</language>
-							<configOptions></configOptions>
-						</configuration>
-					</execution>
-					<execution>
-						<id>object-aspnetcore-api</id>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<inputSpec>${basedir}/src/main/resources/META-INF/resources/api.yaml</inputSpec>
-							<output>${project.build.directory}/aspnetcore/client/</output>
-							<language>aspnetcore</language>
-							<configOptions></configOptions>
-						</configuration>
-					</execution>
-					<execution>
-						<id>object-groovy-api</id>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<inputSpec>${basedir}/src/main/resources/META-INF/resources/api.yaml</inputSpec>
-							<output>${project.build.directory}/groovy/client/</output>
-							<language>groovy</language>
-							<configOptions></configOptions>
-						</configuration>
-					</execution>
-					<execution>
-						<id>object-java-api</id>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<inputSpec>${basedir}/src/main/resources/META-INF/resources/api.yaml</inputSpec>
-							<output>${project.build.directory}/java/client/</output>
-							<language>java</language>
+							<language>swift4</language>
 							<configOptions></configOptions>
 						</configuration>
 					</execution>
